@@ -15,6 +15,23 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 # Create your objects here.
 ev3 = EV3Brick()
 
+mB = Motor(Port.B)
+mC = Motor(Port.C)
 
-# Write your program here.
-ev3.speaker.beep()
+mB.run(220)
+mC.run(220)
+
+wait(3000)
+mB.brake()
+mC.brake()
+
+mB.run(-220)
+mC.run(-220)
+
+wait(3000)
+mB.brake()
+mC.brake()
+
+
+
+
